@@ -10,5 +10,9 @@ RUN conda install -y seaborn=0.10.1 scikit-learn=0.23.1
 # install histomicstk with all additional dependencies
 RUN pip install pip install histomicstk --find-links https://girder.github.io/large_image_wheels
 
+# install dependencies for cellPose
+RUN pip install cellPose
+RUN conda install -y -c anaconda mxnet
+
 # with back to mainuser user
 USER mainuser
